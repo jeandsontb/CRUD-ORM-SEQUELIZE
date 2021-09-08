@@ -17,6 +17,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-model.sequelize.sync({ force: true }).then(() => {
+model.sequelize.sync().then(() => {
   app.listen(port, () => console.log('Server listening ', port));
 });
