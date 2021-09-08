@@ -6,6 +6,22 @@ const sequelize = new Sequelize('type_orm_sequelize', 'root', '', {
 
 // sequelize.authenticate().then(() => console.log('auth')); //para testar a connexão
 
-sequelize.import('./pessoa.js');
 
-sequelize.sync().then(() => console.log('synced'));
+const fs = require('fs');
+const path = require('path');
+const models = {};
+
+  fs
+  .readdirSync(__dirname)
+  .filter((file) => file !== 'index.js')
+  .forEach((file) => {
+    const model = sequelize.import(path.join(__dirname, file));
+    models[model.name] = model
+    console.log('sdfsd ', model)
+  });
+  console.log('ssasasa ',models)
+
+module.exports = {
+  sequelize,
+  models
+};
