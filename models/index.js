@@ -16,10 +16,8 @@ const models = {};
   .filter((file) => file !== 'index.js')
   .forEach((file) => {
     const model = sequelize.import(path.join(__dirname, file));
-    models[model.name] = model
-    console.log('sdfsd ', model)
+    models[model.name] = model;
   });
-  console.log('ssasasa ',models)
 
 module.exports = {
   sequelize,
