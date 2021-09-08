@@ -4,6 +4,7 @@ const app = express();
 const port = process.env.port || 3333;
 
 const routerPessoa = require('./routes/pessoas');
+const model = require('./models/index');
 
 app.use(express.static('public'));
 
