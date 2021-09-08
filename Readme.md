@@ -16,7 +16,11 @@
 
 ### Interface Web
 
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="CRUD" title="#CRUD" src="https://raw.githubusercontent.com/jeandsontb/CRUD-ORM-SEQUELIZE/main/assets/crud1.png" width="400px">
 
+  <img alt="CRUD" title="#CRUD" src="https://raw.githubusercontent.com/jeandsontb/CRUD-ORM-SEQUELIZE/main/assets/crud2.png" width="400px">
+</p>
 
 ## 🛠 Tecnologias
 
