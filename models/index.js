@@ -18,6 +18,11 @@ const models = {};
     const model = sequelize.import(path.join(__dirname, file));
     models[model.name] = model;
   });
+  Object.keys(models).forEach(nameModel => {
+    if('associate' in models[nameModel]) {
+      models[nameModel].associate(models)
+    }
+  })
 
 module.exports = {
   sequelize,
